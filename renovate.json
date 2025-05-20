@@ -25,6 +25,6 @@
     "enabled": true
   },
   "osvVulnerabilityAlerts": true,
-  "schedule": ["18 2 * * *"],
+  "schedule": ["20 2 * * *"],
   "baseBranches": ["main", "develop"]
 }
