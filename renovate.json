@@ -3,9 +3,17 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "groupName": "Mend: high confidence minor and patch dependency updates",
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchConfidence": ["very high", "high"]
+      "description": "Schedule updates on Monday mornings(before 4 AM)",
+      "matchPackageNames": ["*"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "schedule": ["* 18-6 * * *"],
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
       "matchSourceUrls": ["https://github.com/**"],
@@ -26,6 +34,5 @@
     "enabled": true
   },
   "osvVulnerabilityAlerts": true,
-  "schedule": ["* 4,9,14,17,23 * * *"],
-  "baseBranches": ["main", "develop"]
+  "baseBranches": ["develop"]
 }
