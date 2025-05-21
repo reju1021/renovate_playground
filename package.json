@@ -10,10 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "fastify": "^5.0.0",
     "lululemon": "^0.0.1-security",
     "@getbrevo/brevo": "^2.2.0",
     "@sanity/client": "^7.0.0",
+=======
+    "fastify": "^4.9.1",
+    "lululemon": "^0.0.1-security",
+    "@getbrevo/brevo": "^2.2.0",
+    "@sanity/client": "^6.1.0",
+>>>>>>> develop
     "@types/express-useragent": "^1.0.5",
     "@types/lodash": "^4.17.0",
     "@types/node-schedule": "^2.1.7",
