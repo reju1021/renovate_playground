@@ -3,8 +3,9 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "enabled": false,
-      "matchPackageNames": ["*"]
+      "groupName": "Mend: high confidence minor and patch dependency updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchConfidence": ["very high", "high"]
     },
     {
       "matchSourceUrls": ["https://github.com/**"],
