@@ -11,7 +11,7 @@
         "minor",
         "patch"
       ],
-      "schedule": ["* 0-24 * * *"],
+      "schedule": ["* 0-23 * * *"],
       "automerge": true,
       "automergeType": "branch"
     },
