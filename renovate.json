@@ -3,15 +3,31 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "description": "Schedule updates on Monday mornings(before 4 AM)",
+      "description": "Schedule major updates once a month",
+      "matchPackageNames": ["*"],
+      "groupName": "all major dependencies",
+      "groupSlug": "all-major",
+      "matchUpdateTypes": ["major"],
+      "schedule": ["* 4 1 * *"],
+      "automerge": false
+    },
+    {
+      "description": "Schedule minor updates on Monday mornings",
       "matchPackageNames": ["*"],
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "schedule": ["* 0-23 * * *"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "schedule": ["* 0-4 * * 1"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Auto merge anything lint related",
+      "matchPackageNames": ["lint", "prettier"],
+      "groupName": "all dev linter dependencies",
+      "groupSlug": "all-linters",
+      "schedule": ["* * * * *"],
+      "matchDepTypes": ["devDependencies"],
       "automerge": true,
       "automergeType": "branch"
     },
