@@ -12,7 +12,7 @@
   "dependencies": {
     "fastify": "^5.0.0",
     "lululemon": "^0.0.1-security",
-    "@getbrevo/brevo": "^2.2.0",
+    "@getbrevo/brevo": "^3.0.0",
     "@sanity/client": "^7.0.0",
     "@types/express-useragent": "^1.0.5",
     "@types/lodash": "^4.17.0",
